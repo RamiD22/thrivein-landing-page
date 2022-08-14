@@ -1,34 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import styles from './style';
+import {Navbar, CTA, AboutUS, Footer, Hero, MissionVision, Team} from './components';
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+const App = () => (
+    <div className="bg-gradient-to-r from-purple-700 via-purple-800 to-gray-900 w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar/>
+        </div>           
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className={`bg-conic-to-l from-yellow-500 via-purple-500 to-blue-500 ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+         <Hero/>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className={`bg-rose-900	 ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <AboutUS/>
+         
+          
+         
+          </div>
+      </div>
+      <div className={`bg-amber-700	 ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+       
+        <MissionVision/>
+        </div>
+      </div>
+      <div className={`bg-emerald-900	 ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+       
+        <CTA/>
+        </div>
+      </div>
+      <div className={`bg-indigo-900	 ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+       
+        <Team/>
+        </div>
+      </div>
+          <div className={`bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r ${styles.paddingX} ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+       
+          <Footer/>
+        </div>
+      </div>
+
+
     </div>
   )
-}
 
 export default App
